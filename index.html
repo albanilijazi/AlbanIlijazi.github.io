@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    <title>Alban Ilijazi</title>
+    <link rel="icon" type="image/x-icon" href="/images/A.jpeg">
+</head>
+
+<body>
+    <div>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Home')">Home</button>
+            <button class="tablinks" onclick="openCity(event, 'About')">About</button>
+            <button class="tablinks" onclick="openCity(event, 'Contact')">Contact</button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="Home" class="tabcontent">
+            <h3>Hallo, Ich bin Alban Ilijazi.</h3>
+            <p>Dies ist meine erste selbsterstellte Website.</p>
+            <img src="/images/Polarfuchs.jpg" alt="Polarfuchs" width="500" height="333">
+
+        </div>
+
+        <div id="About" class="tabcontent">
+            <div class="text">
+                <h3>Über Mich</h3>
+                <p>Mein name lautet Alban Ilijazi, Ich bin 15 Jahre alt und wurde am 28.04.2008 Geboren. Ich habe braune
+                    Haare
+                    und braune Augen aber bin etwas klein für mein Alter.</p>
+                <p style="font-size:20px;">Fähigkeiten:</p>
+                <p>Ich bin gut in Mathematik und im Englisch, Ich bin
+                    immer Motiviert, Ich kann sehr gut Zeichnen und auch gut im
+                    Team Arbeiten.</p>
+                <p style="font-size:20px;">Lieblingssachen:</p>
+
+                <style>
+                    table,
+                    th,
+                    td {
+                        border: 1px solid black;
+                    }
+                </style>
+
+                <table style="width:100%">
+                    <tr>
+                        <td>Lieblings Beschäftigung</td>
+                        <td>Lieblings Tier</td>
+                        <td>Lieblings Farbe</td>
+                    </tr>
+                    <tr>
+                        <td>Fitness</td>
+                        <td>Polar Fuchs</td>
+                        <td>Türkis</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <div id="Contact" class="tabcontent">
+            <p style="font-size:20px;">Kontakt:</p>
+            <p>Alban Ilijazi</p>
+            <p>1. E-Mail: alban.ilijazi@hotmail.com</p>
+            <p>2. E-Mail: alban.ilijazi@icloud.com</p>
+            <p>Tel: +41 76 527 21 25</p>
+
+        </div>
+        <script>
+            function openCity(evt, cityName) {
+                // Declare all variables
+                var i, tabcontent, tablinks;
+
+                // Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                // Show the current tab, and add an "active" class to the button that opened the tab
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+        </script>
+
+        <script>
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
+
+    </div>
+</body>
+
+</html>
